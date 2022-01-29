@@ -3,6 +3,7 @@ from pathlib import Path
 import os
 
 import dj_database_url
+from django import conf
 import django_heroku
 import cloudinary
 import cloudinary.uploader
@@ -16,12 +17,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('secret_key')
+# SECRET_KEY = os.environ.get('secret_key')
+SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'trekthehill.herokuapp.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
