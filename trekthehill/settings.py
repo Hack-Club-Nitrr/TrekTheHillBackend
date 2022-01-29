@@ -84,6 +84,8 @@ DATABASES = {
     }
 }
 
+db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(db_from_env)
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
@@ -152,5 +154,8 @@ JET_DEFAULT_THEME = 'green'
 
 JET_CHANGE_FORM_SIBLING_LINKS = False
 
+django_heroku.settings(locals())
 
-
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:3000', 
+]
