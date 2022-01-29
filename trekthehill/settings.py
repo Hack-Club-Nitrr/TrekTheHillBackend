@@ -129,6 +129,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
 )
+
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
@@ -156,8 +157,8 @@ JET_DEFAULT_THEME = 'green'
 
 JET_CHANGE_FORM_SIBLING_LINKS = False
 
-django_heroku.settings(locals())
 
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000', 
 ]
+django_heroku.settings(locals())
