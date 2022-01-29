@@ -13,7 +13,6 @@ urlpatterns = [
     path('jet/', include('jet.urls', 'jet')), 
     path('jet/dashboard/', include('jet.dashboard.urls', 'jet-dashboard')),  
     path('', admin.site.urls),
-    path('', include('team.urls')),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 
