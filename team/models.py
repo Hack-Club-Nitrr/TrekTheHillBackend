@@ -9,7 +9,7 @@ class Team(models.Model):
     designation = models.CharField(max_length=1050)
     phone = models.CharField(max_length=10,blank=True)
     instagram = models.CharField(max_length=1050,blank=True)
-    facebok = models.CharField(max_length=1050,blank=True)
+    facebook = models.CharField(max_length=1050,blank=True)
     linkedin = models.CharField(max_length=1050,blank=True)
     image = models.ImageField(upload_to='images')
 
