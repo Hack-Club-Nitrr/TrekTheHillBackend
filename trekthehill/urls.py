@@ -12,7 +12,8 @@ router.register(r'team', team_views.TeamView)
 urlpatterns = [
     path('jet/', include('jet.urls', 'jet')), 
     path('jet/dashboard/', include('jet.dashboard.urls', 'jet-dashboard')),  
-    path('', admin.site.urls),
+    path('/admin', admin.site.urls),
+    path('', include('team.urls')),
     path('api/', include(router.urls)),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 

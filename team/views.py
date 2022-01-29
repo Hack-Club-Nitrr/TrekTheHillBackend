@@ -8,3 +8,5 @@ class TeamView(viewsets.ModelViewSet):
     queryset = Team.objects.all()
 
 
+def index(request):
+    return render(request, 'index.html')
