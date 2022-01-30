@@ -2,12 +2,15 @@ from django.contrib import admin
 from django.urls import path,include
 from rest_framework import routers
 from team import views as team_views
+from sponser import views as sponser_views
 from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
 
 router = routers.DefaultRouter()
 router.register(r'team', team_views.TeamView)
+router.register(r'sponser', sponser_views.SponserView)
+
 
 urlpatterns = [
     path('jet/', include('jet.urls', 'jet')), 
@@ -20,4 +23,3 @@ urlpatterns = [
 admin.site.site_header = "TREK THE HILL"
 admin.site.site_title = "Admin Portal"
 admin.site.index_title = "Welcome to Portal"
-
