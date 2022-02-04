@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'team',
     'sponser',
+    'event',
+    'contact',
     'cloudinary',
     'corsheaders',
     
@@ -172,6 +174,6 @@ JET_CHANGE_FORM_SIBLING_LINKS = False
 
 
 CORS_ALLOWED_ORIGINS = [
-    'http://localhost:3000', 
+    'http://localhost:3000', 'https://www.trekthehill.co',
 ]
 django_heroku.settings(locals())
