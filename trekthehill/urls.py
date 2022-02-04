@@ -3,6 +3,8 @@ from django.urls import path,include
 from rest_framework import routers
 from team import views as team_views
 from sponser import views as sponser_views
+from event import views as event_views
+from contact import views as contact_views
 from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
@@ -10,6 +12,9 @@ from django.conf.urls.static import static
 router = routers.DefaultRouter()
 router.register(r'team', team_views.TeamView)
 router.register(r'sponser', sponser_views.SponserView)
+router.register(r'contact', contact_views.ContactView)
+router.register(r'event', event_views.EventView)
+
 
 
 urlpatterns = [
