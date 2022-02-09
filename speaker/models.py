@@ -17,9 +17,9 @@ class Speaker(models.Model):
     role = models.CharField(
         max_length=200,
         choices=role,
-        default='web'
+        default='speaker'
     )
-
+    preference= models.CharField(max_length=2)
     # body = models.TextField()
 
     def _str_(self):
