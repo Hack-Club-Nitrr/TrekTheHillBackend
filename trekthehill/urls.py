@@ -5,6 +5,8 @@ from team import views as team_views
 from sponser import views as sponser_views
 from event import views as event_views
 from contact import views as contact_views
+from speaker import views as speaker_views
+
 from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
@@ -14,6 +16,8 @@ router.register(r'team', team_views.TeamView)
 router.register(r'sponser', sponser_views.SponserView)
 router.register(r'contact', contact_views.ContactView)
 router.register(r'event', event_views.EventView)
+router.register(r'event', speaker_views.SpeakerView)
+
 
 
 

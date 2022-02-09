@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'team',
     'sponser',
     'event',
+    'speaker',
     'contact',
     'cloudinary',
     'corsheaders',
