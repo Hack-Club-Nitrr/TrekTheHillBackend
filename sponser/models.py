@@ -1,10 +1,11 @@
 from django.db import models
 SPONSER_CATEGORY = (
-    ('diamond','DIMOND'),
-    ('platinum', 'PLAINUM'),
+    ('diamond','DIAMOND'),
+    ('platinum', 'PLATINUM'),
     ('gold','GOLD'),
     ('silver','SILVER'),
     ('bronze','BRONZE'),
+    ('community_partner','COMMUNITY PARTNER')
 )
 
 class Sponser(models.Model):
