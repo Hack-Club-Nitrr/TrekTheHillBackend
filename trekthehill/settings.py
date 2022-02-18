@@ -17,11 +17,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('secret_key')
-# SECRET_KEY = config('SECRET_KEY')
+#SECRET_KEY = os.environ.get('secret_key')
+SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -175,6 +175,6 @@ JET_CHANGE_FORM_SIBLING_LINKS = False
 
 
 CORS_ALLOWED_ORIGINS = [
-    'http://localhost:3000', 'https://www.trekthehill.co',
+    'http://localhost:3000', 'https://www.trekthehill.co','https://trekthehill.co'
 ]
 django_heroku.settings(locals())
