@@ -6,6 +6,8 @@ from sponser import views as sponser_views
 from event import views as event_views
 from contact import views as contact_views
 from speaker import views as speaker_views
+from judge import views as judge_views
+
 
 from django.contrib import admin
 from django.conf import settings
@@ -17,6 +19,8 @@ router.register(r'sponser', sponser_views.SponserView)
 router.register(r'contact', contact_views.ContactView)
 router.register(r'event', event_views.EventView)
 router.register(r'speaker', speaker_views.SpeakerView)
+router.register(r'judge', judge_views.JudgeView)
+
 
 
 
