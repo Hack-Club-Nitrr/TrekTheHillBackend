@@ -21,7 +21,8 @@ class Team(models.Model):
     facebook = models.CharField(max_length=1050,blank=True)
     linkedin = models.CharField(max_length=1050,blank=True)
     twitter = models.CharField(max_length=1050,blank=True)
-    image = models.CharField(max_length=2000,blank=False)
+    image = models.ImageField(upload_to='images')
+
     domain = models.CharField(
         max_length=200,
         choices=domain,
